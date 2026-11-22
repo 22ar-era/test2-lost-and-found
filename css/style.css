@@ -53,22 +53,44 @@ body {
 .navbar-utama {
   background-color: #ffffff;
   border-bottom: 1px solid #d9d9d9;
-  min-height: 78px;
+  min-height: 72px;
+}
+
+/* Deretan navigasi tengah (Desktop >= 1200px) */
+.nav-tengah,
+.navbar-collapse .d-flex.mx-auto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 
 .tombol-nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.45rem 1.05rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 9px;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #111111;
   background-color: #ffffff;
   border: 1px solid #9a9a9a;
   text-decoration: none;
   white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+@media (min-width: 1400px) {
+  .nav-tengah,
+  .navbar-collapse .d-flex.mx-auto {
+    gap: 0.65rem;
+  }
+  .tombol-nav {
+    padding: 0.5rem 1.05rem;
+    font-size: 0.88rem;
+  }
 }
 
 .tombol-nav:hover {
@@ -86,7 +108,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3rem 1.15rem;
+  padding: 0.35rem 1.15rem;
   border-radius: 999px;
   border: 1px solid #8c8c8c;
   background-color: #ffffff;
@@ -94,6 +116,7 @@ body {
   font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .lingkaran-profil {
@@ -103,6 +126,40 @@ body {
   border: 1px solid #8c8c8c;
   background-color: #ffffff;
   display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Navigasi saat layar disempitin (Mode Hamburger Menu < 1200px) */
+@media (max-width: 1199.98px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+    padding: 1rem 0 0.5rem 0;
+  }
+
+  .nav-tengah,
+  .navbar-collapse .d-flex.mx-auto {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+    gap: 0.5rem !important;
+    margin: 0.75rem 0 !important;
+  }
+
+  .tombol-nav {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-kanan,
+  .navbar-collapse .d-flex:last-child {
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid #e9ecef;
+    width: 100%;
+  }
 }
 
 /* Tombol */
