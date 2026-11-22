@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar Barang Temuan - Lost &amp; Found FILKOM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar-utama sticky-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a href="dashboard-mahasiswa.html" class="logo-brand">
+          <span>Lost &amp; Found</span>
+          <span><span class="logo-fil">FIL</span><span class="logo-kom">KOM</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuMhs">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuMhs">
+          <div class="d-flex flex-wrap justify-content-center gap-2 mx-auto my-2 my-lg-0">
+            <a href="dashboard-mahasiswa.html" class="tombol-nav">Dashboard</a>
+            <a href="lapor-kehilangan.html" class="tombol-nav">Lapor Kehilangan</a>
+            <a href="lapor-temuan.html" class="tombol-nav">Lapor Temuan</a>
+            <a href="daftar-barang.html" class="tombol-nav active">Cari Barang</a>
+            <a href="status-klaim.html" class="tombol-nav">Status Klaim</a>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <span class="badge-peran">Mahasiswa</span>
+            <span class="lingkaran-profil"></span>
+            <a href="index.html" class="text-dark text-decoration-none fw-bold small">Keluar</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4">
+    <h2 class="fw-bold mb-4">Daftar Barang Temuan</h2>
+
+    <!-- Filter -->
+    <div class="panel-biru p-4 mb-4">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-3">
+          <label class="form-label text-white small fw-medium">Kategori</label>
+          <select id="filterKategori" class="form-select input-lf">
+            <option value="Semua">Semua kategori</option>
+            <option value="Alat Minum">Alat Minum</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Aksesoris">Aksesoris</option>
+            <option value="Alat Tulis">Alat Tulis</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label text-white small fw-medium">Lokasi</label>
+          <select id="filterLokasi" class="form-select input-lf">
+            <option value="Semua">Semua lokasi</option>
+            <option value="Ruang F4.2">Ruang F4.2</option>
+            <option value="Ruang F3.8">Ruang F3.8</option>
+            <option value="Ruang F11.2">Ruang F11.2</option>
+            <option value="Ruang F1.2">Ruang F1.2</option>
+            <option value="Lab G1.2">Lab G1.2</option>
+            <option value="Junction">Junction</option>
+            <option value="Ruang F2.4">Ruang F2.4</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label text-white small fw-medium">Tanggal</label>
+          <input type="date" id="filterTanggal" class="form-control input-lf" />
+        </div>
+        <div class="col-md-3 d-flex gap-2">
+          <button type="button" id="btnTerapkanFilter" class="btn btn-biru flex-grow-1">Terapkan Filter</button>
+          <button type="button" id="btnResetFilter" class="btn btn-putih px-3">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid 8 Barang Temuan -->
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Alat Minum" data-lokasi="Ruang F4.2">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/botol-minum.png" alt="Botol Minum" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">Botol Minum</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F4.2 - 1 Desember 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Elektronik" data-lokasi="Ruang F4.2">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/charger-hp.png" alt="Charger HP" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">Charger HP</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F4.2 - 15 November 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis B</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Aksesoris" data-lokasi="Ruang F3.8">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/payung.png" alt="Payung" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">Payung</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F3.8 - 30 November 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Elektronik" data-lokasi="Ruang F11.2">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/laptop.png" alt="Laptop" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">Laptop</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F11.2 - 12 November 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Alat Tulis" data-lokasi="Ruang F1.2">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/kotak-pensil.png" alt="Kotak Pensil" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">Kotak Pensil</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F1.2 - 11 November 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis B</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Elektronik" data-lokasi="Lab G1.2">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/hp-samsung.png" alt="HP Samsung Fold 8" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">HP Samsung Fold 8</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Lab G1.2 - 10 November 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Aksesoris" data-lokasi="Junction">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/helm.png" alt="Helm" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">Helm</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Junction - 23 November 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis B</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 item-barang" data-kategori="Lainnya" data-lokasi="Ruang F2.4">
+        <a href="detail-barang.html" class="kartu-barang">
+          <div class="kartu-barang-gambar"><img src="assets/kunci-motor.png" alt="Kunci Motor" /></div>
+          <div class="kartu-barang-isi">
+            <div class="fw-bold small">Kunci Motor</div>
+            <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F2.4 - 12 November 2026</div>
+            <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

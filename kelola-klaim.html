@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelola Klaim dan Serah Terima - Lost &amp; Found FILKOM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar-utama sticky-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a href="verifikasi-laporan.html" class="logo-brand">
+          <span>Lost &amp; Found</span>
+          <span><span class="logo-fil">FIL</span><span class="logo-kom">KOM</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuSatpam">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuSatpam">
+          <div class="d-flex flex-wrap justify-content-center gap-2 mx-auto my-2 my-lg-0">
+            <a href="verifikasi-laporan.html" class="tombol-nav">Verifikasi Laporan</a>
+            <a href="kelola-klaim.html" class="tombol-nav active">Kelola Klaim</a>
+            <a href="riwayat.html" class="tombol-nav">Riwayat</a>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <span class="badge-peran">Satpam</span>
+            <span class="lingkaran-profil"></span>
+            <a href="index.html" class="text-dark text-decoration-none fw-bold small">Keluar</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4">
+    <h2 class="fw-bold mb-4">Kelola Klaim &amp; Serah Terima Barang</h2>
+
+    <!-- Bagian 1: Klaim Diajukan -->
+    <div class="panel-biru p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="fw-bold text-white mb-0">Klaim Diajukan</h5>
+        <span class="pill-status pill-putih">Diajukan</span>
+      </div>
+      <hr class="garis-putih" />
+      <div class="d-flex align-items-center gap-3 mb-3">
+        <div class="thumb-kecil"><img src="assets/payung.png" alt="Payung" /></div>
+        <div>
+          <div class="fw-bold text-white small">Payung</div>
+          <div class="text-white" style="opacity: 0.9; font-size: 0.8rem;">Pengklaim: Anisa N. &middot; 14 Nov 2026</div>
+        </div>
+      </div>
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="kotak-putih h-100">
+            <div class="small text-secondary mb-2">Ciri khusus tersimpan (dari laporan temuan)</div>
+            <div class="small fw-medium">Ada inisial di sarungnya.</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="kotak-putih h-100">
+            <div class="small text-secondary mb-2">Jawaban verifikasi pengklaim</div>
+            <div class="small fw-medium">Payung ini punya sarung hitam bertuliskan inisial saya, "AN", di bagian dalam.</div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end gap-2">
+        <button type="button" id="btnTolakKlaim" class="btn btn-merah px-4">Tolak Klaim</button>
+        <button type="button" id="btnSetujuiKlaim" class="btn btn-hijau px-4">Setujui Klaim</button>
+      </div>
+    </div>
+
+    <!-- Bagian 2: Klaim Disetujui -->
+    <div class="panel-biru p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="fw-bold text-white mb-0">Klaim Disetujui</h5>
+        <span class="pill-status pill-kuning">Disetujui</span>
+      </div>
+      <hr class="garis-putih" />
+      <div class="d-flex align-items-center gap-3 mb-3">
+        <div class="thumb-kecil"><img src="assets/botol-minum.png" alt="Botol Minum" /></div>
+        <div>
+          <div class="fw-bold text-white small">Botol Minum</div>
+          <div class="text-white" style="opacity: 0.9; font-size: 0.8rem;">Pengklaim: Dewi L. &middot; 15 Nov 2026</div>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-md-7">
+          <div class="kotak-putih py-2 small">Mahasiswa sudah dinotifikasi untuk datang ke resepsionis</div>
+        </div>
+        <div class="col-md-5">
+          <button type="button" id="btnSerahkanBarang" class="btn btn-biru w-100">Verifikasi Identitas &amp; Serahkan Barang</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian 3: Klaim Dikembalikan -->
+    <div class="panel-biru-pudar p-4">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="fw-bold text-white mb-0">Klaim Dikembalikan</h5>
+        <span class="pill-status pill-hijau-pudar">Dikembalikan</span>
+      </div>
+      <hr class="garis-putih" />
+      <div class="d-flex align-items-center gap-3 py-1">
+        <div class="thumb-kecil" style="opacity: 0.8;"><img src="assets/botol-minum.png" alt="Botol Minum" /></div>
+        <div>
+          <div class="fw-bold text-white small">Botol Minum</div>
+          <div class="text-white" style="opacity: 0.9; font-size: 0.8rem;">Pengklaim: Raka A. &middot; 09 Nov 2026</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

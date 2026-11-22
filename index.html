@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost &amp; Found FILKOM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navigasi Utama -->
+  <header class="navbar-utama sticky-top">
+    <nav class="navbar py-3">
+      <div class="container">
+        <a href="index.html" class="logo-brand">
+          <span>Lost &amp; Found</span>
+          <span><span class="logo-fil">FIL</span><span class="logo-kom">KOM</span></span>
+        </a>
+        <a href="pilih-peran.html" class="badge-peran">Masuk</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero dan Pencarian -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="label-kampus mb-3">LOST &amp; FOUND FILKOM</span>
+          <h1 class="judul-hero mb-3">
+            Barang hilang?<br />
+            <span class="teks-biru">Laporkan di Lost &amp; Found.</span>
+          </h1>
+          <p class="text-secondary mb-4" style="max-width: 520px;">
+            Laporkan kehilangan, cari barang temuan, dan ajukan klaim.<br />
+            Satu tempat untuk membantu barang kembali ke pemiliknya.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="login-mahasiswa.html" class="btn btn-biru px-4">Lapor Kehilangan</a>
+            <a href="login-mahasiswa.html" class="btn btn-biru-outline px-4">Lapor Temuan</a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="kotak-cari">
+            <h4 class="fw-bold mb-1">Cari barangmu</h4>
+            <p class="text-secondary small mb-4">Cek barang yang sudah ditemukan di kampus.</p>
+            <form id="formCariLanding">
+              <label for="inputCariLanding" class="form-label fw-semibold small">Nama barang atau lokasi</label>
+              <input type="text" id="inputCariLanding" class="form-control input-lf mb-3" placeholder="Contoh: charger atau Ruang F4.2" />
+              <button type="submit" class="btn btn-biru w-100 py-2 mb-3">Cari Barang Temuan &rarr;</button>
+            </form>
+            <p class="text-muted small mb-0">Lihat foto dan detail untuk mengenali barangmu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Akses Laporan -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <a href="login-mahasiswa.html" class="kartu-akses">
+            <div>
+              <div class="text-uppercase small fw-semibold text-muted mb-1" style="font-size: 0.72rem;">MASUK SEBAGAI</div>
+              <h5 class="fw-bold mb-1">Mahasiswa</h5>
+              <p class="text-secondary small mb-0">Lapor, cari barang, dan ajukan klaim</p>
+            </div>
+            <span class="fs-4" style="color: var(--warna-biru-teks);">&rarr;</span>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="login-satpam.html" class="kartu-akses">
+            <div>
+              <div class="text-uppercase small fw-semibold text-muted mb-1" style="font-size: 0.72rem;">MASUK SEBAGAI</div>
+              <h5 class="fw-bold mb-1">Satpam</h5>
+              <p class="text-secondary small mb-0">Verifikasi laporan &amp; kelola klaim</p>
+            </div>
+            <span class="fs-4" style="color: var(--warna-biru-teks);">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barang Temuan -->
+  <section class="pb-5 bg-white">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+        <div>
+          <div class="text-uppercase fw-bold mb-1" style="color: var(--warna-biru-teks); font-size: 0.75rem;">BARANG TEMUAN</div>
+          <h2 class="fw-bold mb-1">Mungkin salah satunya milikmu.</h2>
+          <p class="text-secondary small mb-0">Cek foto dan detailnya untuk mengenali barangmu.</p>
+        </div>
+        <a href="pilih-peran.html" class="fw-semibold text-decoration-none small" style="color: var(--warna-biru-teks);">
+          Lihat semua barang &rarr;
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <a href="pilih-peran.html" class="kartu-barang">
+            <div class="kartu-barang-gambar">
+              <img src="assets/botol-minum.png" alt="Botol Minum" />
+            </div>
+            <div class="kartu-barang-isi">
+              <div class="fw-bold small">Botol Minum</div>
+              <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F4.2 - 1 Desember 2026</div>
+              <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <a href="pilih-peran.html" class="kartu-barang">
+            <div class="kartu-barang-gambar">
+              <img src="assets/charger-hp.png" alt="Charger HP" />
+            </div>
+            <div class="kartu-barang-isi">
+              <div class="fw-bold small">Charger HP</div>
+              <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F4.2 - 15 November 2026</div>
+              <span class="pill-resepsionis mt-auto">Resepsionis B</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <a href="pilih-peran.html" class="kartu-barang">
+            <div class="kartu-barang-gambar">
+              <img src="assets/payung.png" alt="Payung" />
+            </div>
+            <div class="kartu-barang-isi">
+              <div class="fw-bold small">Payung</div>
+              <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F3.8 - 30 November 2026</div>
+              <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <a href="pilih-peran.html" class="kartu-barang">
+            <div class="kartu-barang-gambar">
+              <img src="assets/laptop.png" alt="Laptop" />
+            </div>
+            <div class="kartu-barang-isi">
+              <div class="fw-bold small">Laptop</div>
+              <div class="mb-3" style="font-size: 0.78rem; opacity: 0.92;">Ruang F11.2 - 12 November 2026</div>
+              <span class="pill-resepsionis mt-auto">Resepsionis A</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alur Klaim -->
+  <section class="alur-section">
+    <div class="container">
+      <div class="text-uppercase fw-bold mb-1" style="color: var(--warna-biru-teks); font-size: 0.75rem;">BARANGMU SUDAH DITEMUKAN?</div>
+      <h2 class="fw-bold mb-5">Kembali ke tangan yang tepat.</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="nomor-langkah mb-3">01</div>
+          <h5 class="fw-bold mb-2">Cari barang</h5>
+          <p class="text-secondary small mb-0">Lihat foto, lokasi penemuan, dan detail barang untuk mengenali milikmu.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="nomor-langkah mb-3">02</div>
+          <h5 class="fw-bold mb-2">Ajukan klaim</h5>
+          <p class="text-secondary small mb-0">Jawab pertanyaan verifikasi untuk membuktikan kepemilikan barang.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="nomor-langkah mb-3">03</div>
+          <h5 class="fw-bold mb-2">Ambil barang</h5>
+          <p class="text-secondary small mb-0">Pantau status klaim. Setelah disetujui, lanjutkan serah terima dengan satpam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
