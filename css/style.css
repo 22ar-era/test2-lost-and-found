@@ -1,8 +1,4 @@
-/* =========================================================
-   Lost & Found FILKOM - Stylesheet Utama (Bootstrap 5)
-   ========================================================= */
-
-:root {
+﻿:root {
   --warna-biru-langit: #8ebae0;
   --warna-biru-pudar: #c2d9ee;
   --warna-biru-hero: #eef6fd;
@@ -25,7 +21,6 @@ body {
   margin: 0;
 }
 
-/* Logo Lost & Found FILKOM */
 .logo-brand {
   display: inline-flex;
   align-items: center;
@@ -49,14 +44,12 @@ body {
   color: var(--warna-oranye);
 }
 
-/* Navbar */
 .navbar-utama {
   background-color: #ffffff;
   border-bottom: 1px solid #d9d9d9;
   min-height: 72px;
 }
 
-/* Deretan navigasi tengah (Desktop >= 1200px) */
 .nav-tengah,
 .navbar-collapse .d-flex.mx-auto {
   display: flex;
@@ -129,7 +122,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Navigasi saat layar disempitin (Mode Hamburger Menu < 1200px) */
 @media (max-width: 1199.98px) {
   .navbar-collapse {
     background-color: #ffffff;
@@ -162,7 +154,6 @@ body {
   }
 }
 
-/* Tombol */
 .btn-biru {
   background-color: var(--warna-biru-utama);
   border: 1px solid var(--warna-biru-utama);
@@ -254,7 +245,6 @@ body {
   color: #ffffff;
 }
 
-/* Panel Biru Langit (Ciri Khas Desain) */
 .panel-biru {
   background-color: var(--warna-biru-langit);
   border-radius: 12px;
@@ -274,7 +264,6 @@ body {
   margin: 0.85rem 0;
 }
 
-/* Landing Page */
 .hero-section {
   background-color: var(--warna-biru-hero);
   padding: 4.5rem 0;
@@ -326,7 +315,6 @@ body {
   color: inherit;
 }
 
-/* Kartu Barang Temuan */
 .kartu-barang {
   display: flex;
   flex-direction: column;
@@ -376,7 +364,6 @@ body {
   border-radius: 999px;
 }
 
-/* Bagian Alur Klaim */
 .alur-section {
   background-color: var(--warna-biru-hero);
   padding: 4rem 0;
@@ -395,7 +382,6 @@ body {
   font-size: 0.82rem;
 }
 
-/* Halaman Pilih Peran */
 .kartu-pilih-peran {
   display: flex;
   align-items: center;
@@ -427,7 +413,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Baris Putih di Dalam Panel Biru */
 .baris-putih {
   display: flex;
   align-items: center;
@@ -501,7 +486,6 @@ body {
   padding: 6px;
 }
 
-/* Status Pill */
 .pill-status {
   display: inline-flex;
   align-items: center;
@@ -539,7 +523,6 @@ body {
   color: #1c1c1c;
 }
 
-/* Input & Upload Box */
 .input-lf {
   background-color: #ffffff;
   border: 1px solid #9a9a9a;
@@ -566,7 +549,6 @@ body {
   color: #1c1c1c;
 }
 
-/* Detail Foto Barang */
 .bingkai-foto-detail {
   border: 1px solid #a8a8a8;
   border-radius: 8px;
@@ -584,7 +566,6 @@ body {
   object-fit: contain;
 }
 
-/* Antrean Satpam (Rapi pakai Grid) */
 .header-antrean {
   display: grid;
   grid-template-columns: 1fr 1.15fr 164px;
@@ -615,7 +596,6 @@ body {
   font-size: 0.76rem;
 }
 
-/* Tabel Riwayat */
 .tabel-riwayat {
   width: 100%;
   border-collapse: collapse;
@@ -643,7 +623,6 @@ body {
   background-color: rgba(255, 255, 255, 0.14);
 }
 
-/* Modal */
 .modal-lf {
   border-radius: 14px;
   border: 1px solid #c9c9c9;
